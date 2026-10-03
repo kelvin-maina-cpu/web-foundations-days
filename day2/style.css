@@ -1,0 +1,145 @@
+/* 1. Reset and base styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background: #f2f4f8;
+  color: #222;
+}
+
+/* 2. Header */
+header {
+  background: #2d3a8c;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+/* 3. Navigation: Flexbox, centred row, 16px gap, white text, no underline */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+/* 4. Centred main with max-width */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* White card look for each section */
+section {
+  background: white;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 5. Features list as responsive grid of cards */
+.features {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.features li {
+  background: #eef1ff;
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* 6. Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.6rem;
+  text-align: left;
+}
+
+th {
+  background: #2d3a8c;
+  color: white;
+}
+
+/* Feedback form: fields stacked vertically, full width */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* 7. Buttons and hover effects with transitions */
+button {
+  background: #2d3a8c;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #1b2563;
+  transform: translateY(-2px);
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #555;
+}
+
+/* 8. Media query for small screens */
+@media (max-width: 600px) {
+  header {
+    padding: 1rem 0.5rem;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+}
